@@ -1119,7 +1119,7 @@ document.querySelectorAll(".reveal").forEach(el => io ? io.observe(el) : el.clas
   function fireworks(count = 8) {
     if (reduce) return;
     for (let i = 0; i < count; i++) setTimeout(() =>
-      rockets.push({ x: rand(W * .12, W * .88), y: H + 10, vx: rand(-1.2, 1.2), vy: -rand(9.5, 13.5), c: pick(PAL), trail: [] }), i * 260);
+      rockets.push({ x: rand(W * .12, W * .88), y: H + 10, vx: rand(-1.2, 1.2), vy: -Math.sqrt(2 * .16 * H * rand(.5, .85)), c: pick(PAL), trail: [] }), i * 220);
   }
   function drawFx() {
     f.clearRect(0, 0, W, H);
